@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solomon Galaxy Mechatronic Trend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6e00ff;
+            --secondary: #00f7ff;
+            --dark: #0a0a20;
+            --light: #f0f0ff;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--secondary);
+        }
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        nav a {
+            color: var(--light);
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--secondary);
+        }
+        .hero {
+            height: 70vh;
+            background: url('your-tiktok-photo.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 32, 0.6);
+        }
+        .hero-content {
+            z-index: 1;
+            text-align: center;
+        }
+        .main-content {
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+        .video-container {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+        .comments-section {
+            margin-top: 1rem;
+        }
+        .comment {
+            background: rgba(255,255,255,0.05);
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+        }
+        .sidebar {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 1rem;
+        }
+        .chat-box {
+            height: 300px;
+            overflow-y: auto;
+            margin-bottom: 1rem;
+            border: 1px solid var(--secondary);
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+        footer {
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            padding: 1rem;
+            text-align: center;
+            border-top: 2px solid var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">SOLOMON GALAXY MECHATRONIC TREND</div>
+        <nav>
+            <a href="#videos">Videos</a>
+            <a href="#music">Music</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#chat">Live Chat</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>EXPERIENCE THE FUTURE OF CREATIVE TECHNOLOGY</h1>
+            <p>Videos • Music • Art • Innovation</p>
+            <button>Explore Now</button>
+        </div>
+    </section>
+
+    <div class="main-content">
+        <main>
+            <section id="videos" class="video-container">
+                <h2>Latest Video</h2>
+                <div class="video-player">
+                    <!-- Embedded video player -->
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Video Title</h3>
+                    <p>Description of the video content goes here...</p>
+                    <div class="video-actions">
+                        <button>Like</button>
+                        <button>Share</button>
+                    </div>
+                </div>
+                <div class="comments-section">
+                    <h4>Comments</h4>
+                    <div class="comment-form">
+                        <textarea placeholder="Add a comment..."></textarea>
+                        <button>Post</button>
+                    </div>
+                    <div class="comment">
+                        <strong>User123:</strong> This video is amazing!
+                    </div>
+                    <div class="comment">
+                        <strong>TechFan:</strong> Love your content!
+                    </div>
+                </div>
+            </section>
+
+            <section id="music" class="music-container">
+                <h2>Latest Music</h2>
+                <div class="music-player">
+                    <!-- Audio player -->
+                    <audio controls style="width:100%">
+                        <source src="your-music-track.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div class="music-info">
+                    <h3>Track Title</h3>
+                    <p>Album/Single • Release Date</p>
+                </div>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <section id="chat" class="live-chat">
+                <h3>Live Community Chat</h3>
+                <div class="chat-box" id="chatBox">
+                    <!-- Chat messages will appear here -->
+                    <div class="message"><strong>User1:</strong> Hey everyone!</div>
+                    <div class="message"><strong>User2:</strong> Loving the new video!</div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message...">
+                    <button>Send</button>
+                </div>
+            </section>
+
+            <section class="social-feed">
+                <h3>Latest from TikTok</h3>
+                <!-- Embedded TikTok post -->
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@solomontech/photo/7368533691703872773" data-video-id="7368533691703872773" style="max-width:100%;min-width:100%;">
+                    <section></section>
+                </blockquote>
+            </section>
+
+            <section class="upcoming-events">
+                <h3>Upcoming Events</h3>
+                <div class="event">
+                    <h4>New Music Release</h4>
+                    <p>July 30, 2023</p>
+                </div>
+            </section>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Solomon Galaxy Mechatronic Trend. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">TikTok</a>
+            <a href="#">YouTube</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- TikTok embed script -->
+    <script async src="https://www.tiktok.com/embed.js"></script>
+    
+    <!-- Your custom scripts -->
+    <script>
+        // Chat functionality
+        document.querySelector('.chat-input button').addEventListener('click', function() {
+            const input = document.querySelector('.chat-input input');
+            const message = input.value.trim();
+            if (message) {
+                const chatBox = document.getElementById('chatBox');
+                const newMessage = document.createElement('div');
+                newMessage.className = 'message';
+                newMessage.innerHTML = `<strong>You:</strong> ${message}`;
+                chatBox.appendChild(newMessage);
+                input.value = '';
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        });
+    </script>
+</body>
+</html>
